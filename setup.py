@@ -17,6 +17,7 @@ setup(
     name='xboxapi',
     version=xboxapi.__version__,
     url='https://github.com/mKeRix/xbox-api',
+    download_url=f'https://github.com/mKeRix/xbox-api/tarball/{xboxapi.__version__}',
     license='MIT License',
     author='xapi.us',
     install_requires=['requests'],
