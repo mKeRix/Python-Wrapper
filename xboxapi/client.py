@@ -19,7 +19,7 @@ class Client(object):
 
         self.api_key = api_key
         self.timeout = timeout
-        self.endpoint = 'https://xboxapi.com/v2/'
+        self.endpoint = 'https://xapi.us/v2/'
         self.timeout = timeout if timeout is not None else 3  # Seconds
         self.lang = lang
         self.last_method_call = None

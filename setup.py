@@ -16,9 +16,9 @@ long_description = read('README.md')
 setup(
     name='xboxapi',
     version=xboxapi.__version__,
-    url='https://github.com/mKeRix/Python-Wrapper',
+    url='https://github.com/mKeRix/xbox-api',
     license='MIT License',
-    author='xboxapi.com',
+    author='xapi.us',
     install_requires=['requests'],
     description='XBOX One API',
     long_description=long_description,
