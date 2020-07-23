@@ -1,13 +1,40 @@
-from distutils.core import setup
+import codecs
+import os
+import re
+
+import xboxapi
+
+from setuptools import setup
+
+bin = os.path.abspath(os.path.dirname(__file__))
+
+def read(file):
+    return codecs.open(os.path.join(bin, file), 'r').read()
+
+long_description = read('README.md')
+
 setup(
-  name='xboxapi',
-  packages=['xboxapi'],
-  version='0.1.1',
-  description='A wrapper library for XboxAPI.com',
-  author='XboxAPI.com',
-  author_email='support@xboxapi.com',
-  url='https://github.com/mKeRix/Python-Wrapper',
-  download_url='https://github.com/mKeRix/Python-Wrapper/tarball/0.1.1',
-  keywords=['xbox live', 'xboxapi', 'xbox one', 'gaming', 'wrapper', 'library'],
-  classifiers=[],
+    name='xboxapi',
+    version=xboxapi.__version__,
+    url='https://github.com/mKeRix/Python-Wrapper',
+    license='MIT License',
+    author='xboxapi.com',
+    install_requires=['requests'],
+    description='XBOX One API',
+    long_description=long_description,
+    packages=['xboxapi'],
+    package_data={'': ['README.md', 'LICENSE']},
+    include_package_data=True,
+    platforms='any',
+    classifiers=[
+        'Programming Language :: Python',
+        'Development Status :: 3 - Alpha',
+        'Natural Language :: English',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Games/Entertainment',
+        ],
 )
